@@ -22,7 +22,7 @@ Here is a sample use case for D.U.N.:
 
 A student is working on a MERN full stack application for their coding bootcamp. The application is due in 11 days, and the student is feeling overwhelmed by the task. They decide to use D.U.N. to help them manage their time and stay on track.
 
-The student first logs in or signs up for a free account. They then create a new project for their application. <img src="assets/images/loginWire.jpg">
+The student first logs in or signs up for a free account. They then create a new project for their application. <img src="/assets/images/loginWire.jpg">
 
 The student starts by creating a task in D.U.N. for the application. They then break down the application into smaller tasks, such as researching the topic, creating a wire frame, and rubber ducking what tasks they will need to accomplish. They assign each task a due date and difficulty level.
 
