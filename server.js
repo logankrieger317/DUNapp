@@ -26,6 +26,11 @@ app.get('/tasks/:id', tasksController.getOneTasks)
 app.get('/time/:id', timeController.getOneTimes)
 app.get('/users/:id', usersController.getOneUsers)
 
+app.post('/taskList/:id', taskListController.createOneTaskList)
+app.post('/tasks/:id', tasksController.createOneTasks)
+app.post('/time/:id', timeController.createOneTimes)
+app.post('/users/:id', usersController.createOneUsers)
+
 
 
 
