@@ -26,6 +26,23 @@ app.get('/tasks/:id', tasksController.getOneTasks)
 app.get('/time/:id', timeController.getOneTimes)
 app.get('/users/:id', usersController.getOneUsers)
 
+app.post('/taskList', taskListController.createOneTaskList)
+app.post('/tasks', tasksController.createOneTasks)
+app.post('/time', timeController.createOneTimes)
+app.post('/users', usersController.createOneUsers)
+
+app.put('/taskList/:id', taskListController.updateTaskList)
+app.put('/tasks/:id', tasksController.updateTasks)
+app.put('/time/:id', timeController.updateTimes)
+app.put('/users/:id', usersController.updateUsers)
+
+app.delete('/taskList/:id', taskListController.deleteTaskList)
+app.delete('/tasks/:id', tasksController.deleteTasks)
+app.delete('/time/:id', timeController.deleteTimes)
+app.delete('/users/:id', usersController.deleteUsers)
+
+
+
 
 
 
