@@ -1,13 +1,17 @@
 import { useState } from 'react'
 
+import Home from './components/Home'
+import Nav from './components/Nav'
+
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
     <>
-     <h1>THIS IS A TEST OF THE EMERGENCY MANAGMENT SYSTEM</h1>
+     <Nav />
+     <Home/>
     </>
   )
 }
