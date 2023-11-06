@@ -6,6 +6,8 @@ import Home from "./Home"
 
 
 export default function Main() {
+
+
     return(
         <div className="main">
             <div className="routes-container">
