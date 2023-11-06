@@ -7,6 +7,7 @@ import Button from "react-bootstrap/Button";
 import { BASE_URL } from "../globals";
 
 export default function TaskList() {
+
   const [taskList, setTaskList] = useState([]);
 
   useEffect(() => {
@@ -42,4 +43,5 @@ export default function TaskList() {
       </div>
     </>
   );
+
 }
