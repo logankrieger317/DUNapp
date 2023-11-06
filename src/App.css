@@ -15,137 +15,60 @@
 
 /* NAV BAR STYLING  */
 
-.nav-bar {
+.bg-body-tertiary {
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: #5cccf1;
   width: 430px;
   height: 100px;
-  border-bottom: 5px solid black;
+  border-bottom: 8px solid black;
 }
 
-.logo {
-  display: flex;
-  font-size: 24px;
-  height: 25px;
-  width: 25px;
-  
-}
 
-#logo-image{
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-  z-index: 3;
-}
-
-.menu {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 3%;
-  left: 0;
-  width: 100%;
-  background-color: #5cccf1;
-  color: #fff;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-  z-index: 3;
-}
-
-.menu.show {
-  opacity: 1;
-  visibility: visible;
-  color: black;
-  z-index: 3;
-}
-
-.menu a {
-  padding: 10px;
-  text-align: center;
-  color: black;
-  z-index: 3;
-}
-
-.hamburger {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 20px;
-  cursor: pointer;
-}
-
-.hamburger .line {
-  width: 100%;
-  height: 2px;
-  background-color: #fff;
-  transition: transform 0.3s ease;
-}
-
-.hamburger .line:nth-child(2) {
-  transform-origin: center;
-}
-
-.hamburger.show .line:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
-}
-
-.hamburger.show .line:nth-child(2) {
-  transform: scaleX(0);
-}
-
-.hamburger.show .line:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
-}
-
-@media (max-width: 1000px) {
-  .menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: #333;
-    color: #fff;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-  }
-
-  .menu.show {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .menu a {
-    display: block;
-    padding: 10px;
-    text-align: center;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-
-  nav {
-    justify-content: center;
-  }
-
-} 
 
 /* HOME PAGE STYLE */
-.Home {
+.home-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100vw;
   color: black;
+  border: solid black 3px;
+  height: 932px;
+  width: 430px;  
+}
+
+.upper-row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  border: solid black 3px;
+
+}
+
+.lower-row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  border: solid black 3px;
+}
+
+.cont-1 , .cont-2, .cont-3, .cont-4, .cont-5 {
+  border: solid black 3px;
+}
+
+.cont-1{
   
 }
+
+
+
+
 
 
 /* LOGIN SCREEN */
