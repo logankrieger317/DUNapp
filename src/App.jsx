@@ -1,7 +1,7 @@
 import { useState } from 'react'
-
-import Home from './components/Home'
 import Nav from './components/Nav'
+import Login from './components/Login'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 import './App.css'
 
@@ -9,10 +9,10 @@ function App() {
   
 
   return (
-    <>
+    <div className='app'>
      <Nav />
-     <Home/>
-    </>
+     <Login/>
+    </div>
   )
 }
 
