@@ -7,9 +7,10 @@ export default function TaskList() {
 
     const [taskList, setTaskList] = useState([])
 
+
     useEffect(()=>{
         const getTasklist = async() => {
-            const response = await axios.get()
+            const response = await axios.get(`http://localhost:3001/taskList/${id}`)
             setTaskList(response)
             console.log(response)
         }
