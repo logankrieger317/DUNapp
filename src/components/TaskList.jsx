@@ -1,41 +1,45 @@
-import { useState, useEffect } from "react"
-import axios from "axios"
-import { useNavigate } from "react-router-dom"
-
+import axios from "axios";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import SiteNav from "./Nav";
+import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
+import { BASE_URL } from "../globals";
 
 export default function TaskList() {
+  const [taskList, setTaskList] = useState([]);
 
-    const [taskList, setTaskList] = useState([])
+  useEffect(() => {
+    const getTasklist = async () => {
+      const response = await axios.get( '${BASE_URL}/tasks');
+      setTaskList(response.data);
+    };
+    getTasklist();
+  }, []);
 
-    useEffect(()=>{
-        const getTasklist = async() => {
-            const response = await axios.get()
-            setTaskList(response)
-            console.log(response)
-        }
-        getTasklist()
-    },[])
+  let navigate = useNavigate();
 
-    let navigate = useNavigate()
+  const showTask = (key) => {
+    navigate(`/tasks/${key}`);
+  };
 
-    const showTask = (key) => {
-        navigate(`${key}`)
-    }
-
-
-    return(
-        <div className="taskList">
-            <h2>Task List</h2>
-            {
-                taskList.map((task, key) => (
-                    <div key={key} onClick={()=>showTask(key)} className="card">
-                        <h3>{task.name}</h3>
-                        <h4>{task.time}</h4>
-
-                    </div>
-                ))
-            }
-            
-        </div>
-    )
+  return (
+    <>
+      <SiteNav />
+      <div className="TaskList">
+        <h2>Task List</h2>
+        {taskList.map((task, key) => (
+          <Card key={key} className="mb-3">
+            <Card.Body>
+              <Card.Title>{task.name}</Card.Title>
+              <Card.Text>{task.description}</Card.Text>
+              <Button variant="primary" onClick={() => showTask(task.id)}>
+                View Task
+              </Button>
+            </Card.Body>
+          </Card>
+        ))}
+      </div>
+    </>
+  );
 }

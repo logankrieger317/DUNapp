@@ -10,7 +10,7 @@ export default function SiteNav() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">View All Tasks</Nav.Link>
+            <Nav.Link href="TaskList">View All Tasks</Nav.Link>
             <Nav.Link href="#link">Create New Task</Nav.Link>
             <NavDropdown title="Meet The Team" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Joshua Thomas </NavDropdown.Item>
@@ -21,6 +21,7 @@ export default function SiteNav() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+
     
   )
 }
