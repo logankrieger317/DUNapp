@@ -1,21 +1,32 @@
 import { useState } from 'react';
+import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
 
-export default function Nav() {
-  const [showMenu, setShowMenu] = useState(false);
-
+export default function SiteNav() {
+  
   return (
-    <nav className='nav-bar'>
-      <div className="logo"><img id="logo" src='src/assets/images/Logo.jpeg'></img></div>
-      <div className={`menu ${showMenu ? 'show' : ''}`}>
-        <a href="#"><p id='navP'>These Are Placeholders that we will put routes into</p> </a>
-        <a href="#">These Are Placeholders that we will put routes into</a>
-        <a href="#">These Are Placeholders that we will put routes into</a>
-      </div>
-      <div className="hamburger" onClick={() => setShowMenu(!showMenu)}>
-        <div className="line"></div>
-        <div className="line"></div>
-        <div className="line"></div>
-      </div>
-    </nav>
-  );
+     <Navbar expand="lg" className="bg-body-tertiary">
+      <Container>
+        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#link">Link</Nav.Link>
+            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                Another action
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">
+                Separated link
+              </NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+    
+  )
 }

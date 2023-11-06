@@ -1,18 +1,19 @@
 import { useState } from 'react'
-
-import Home from './components/Home'
 import Nav from './components/Nav'
-
+import Home from './components/Home'
+import Login from './components/Login'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
+
 
 function App() {
   
 
   return (
-    <>
-     <Nav />
-     <Home/>
-    </>
+    <div className='app'>
+      <Nav />
+      <Login />
+    </div>
   )
 }
 

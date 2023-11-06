@@ -28,9 +28,6 @@ export default function TaskList() {
             {
                 taskList.map((task, key) => (
                     <div key={key} onClick={()=>showTask(key)} className="card">
-                        <div></div>
-                        <div></div>
-                        <div></div>
 
                     </div>
                 ))
