@@ -26,6 +26,12 @@ const main = async () => {
   })
   user3.save()
 
+
+
+
+
+
+
 const task1 = await new Task ({
     name: "Trash",
     description: "Take trash to curb",
@@ -42,7 +48,7 @@ const task4 = await new Task ({
     name: "Mow",
     description: "Mow back and front yard, weedeat, leafblow",
     user:user1._id,
-    time: new Date("2023-11-15T08:00:00")
+    time: new Date("2023-11-21T08:00:00")
 
 
 
@@ -54,7 +60,7 @@ const task4 = await new Task ({
     name: "Clean Gutters",
     description: "Clean gutters on roof of all debree, wash out with water when complete.",
     user:user1._id,
-    time: new Date("2023-14-15T14:40:00")
+    time: new Date("2023-09-05T14:40:00")
 
 
 
@@ -66,7 +72,7 @@ const task2 = await new Task ({
     name: "Clean House",
     description: "sweep/mop living room floor and clean all windows on first floor",
     user: user2._id,
-    time: new Date("2023-10-15T12:30:00")
+    time: new Date("2023-07-20T12:30:00")
 
 
   })
@@ -77,15 +83,22 @@ const task3 = await new Task ({
     name: "Clean car",
     description: "Clean and wash interior/exterior of the truck",
     user: user3._id,
-    time: new Date("2023-10-15T09:15:00")
+    time: new Date("2023-08-10T09:15:00")
 
 
   })
   task3.save()
 
 
+
+
+
+
+
+
 const taskList = await new TaskList ({
-    task: task1._id
+    user: user1._id,
+    task: [task1._id,task4._id,task5._id]
 
   })
   taskList.save()
