@@ -1,11 +1,8 @@
-import { useState, useEffect } from "react"
-import axios from "axios"
-import { useNavigate } from "react-router-dom"
-import Card from 'react-bootstrap/Card'
-import Button from 'react-bootstrap/Button'
-import SiteNav from './Nav'
+import { useState } from "react";
+import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-
+import SiteNav from "./Nav";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   const [fullscreen, setFullscreen] = useState(true);
@@ -58,6 +55,7 @@ export default function Home() {
     setTaskDescription('');
   }
 
+
   function TaskTable(props) {
     const taskRows = props.tasks.slice(0, 5).map(task => (
       <tr key={task.id}>
@@ -81,6 +79,7 @@ export default function Home() {
     );
   }
 
+
   return (
     <div>
       <SiteNav />
@@ -90,7 +89,7 @@ export default function Home() {
         </div>
         <div className='home-body'>
           <button className='new-task-button' onClick={handleNewTaskClick}>New Task</button>
-          <button className='view-task-button'>View All Tasks</button>
+          <Link to= "/TaskList"><button className='view-task-button'>View All Tasks</button></Link>
           <TaskTable tasks={tasks} />
           <Modal show={show} fullscreen={fullscreen} onHide={handleClose}>
             <Modal.Header closeButton>
