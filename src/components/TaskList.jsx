@@ -6,13 +6,19 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import { BASE_URL } from "../globals";
 
+
 export default function TaskList() {
 
   const userId = "654947612adc709e9b98fc33"
 
   const [taskList, setTaskList] = useState([]);
+  
 
+
+
+  
   useEffect(() => {
+    
     const getTasklist = async () => {
 
 
@@ -27,7 +33,10 @@ export default function TaskList() {
 
     };
     getTasklist();
+
   }, []);
+
+
 
   let navigate = useNavigate();
 
@@ -38,9 +47,20 @@ export default function TaskList() {
   function deleteTaskFunction(key){
     const deleteTask = async() => {
       const response2 = await axios.delete(`${BASE_URL}/tasks/${key}`)
+      console.log(response2)
+      console.log(taskList)
+      setTaskList(prevTaskList => prevTaskList.filter(task => task._id !== response2.data._id))
     }
     deleteTask()
+    
+    // const getNewTaskList = async () => {
+    //   const response3 = await axios.get( `${BASE_URL}/tasks/`)
+    //   setTaskList(response3.data)
+    // }
+    // getNewTaskList()
+    
   }
+
 
 
   return (
