@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import SiteNav from "./Nav";
 import { Link } from "react-router-dom";
+import TaskDetail from "./TaskDetail";
 
 export default function Home() {
   const [fullscreen, setFullscreen] = useState(true);
@@ -117,6 +118,8 @@ export default function Home() {
               <Modal.Body>Modal body content</Modal.Body>
             </Modal>
           )}
+
+          
         </div>
       </div>
     </div>
