@@ -11,7 +11,14 @@ import {Navigate} from 'react-router-dom'
 
 
 function App() {
-  const userId= "d" //set user with function to get user
+  const userId= {
+    id: "654947612adc709e9b98fc33",
+    name: "Erik Smith",
+    Login: "esiff@gmail.com",
+    password: "Password1",
+    
+
+  } //set user with function to get user
   const [user, setUser] = useState(userId) //add in get user function when validating
 
 
@@ -21,8 +28,8 @@ function App() {
       <Routes>
         <Route path="/" element={user  ? <Navigate to={"/Home"}/> : <Login setUser= {setUser}/> }/>
         <Route path="/Home" element={user ? <Home/> : <Login setUser= {setUser}/>}/>
-         <Route path="/TaskList" element={user ? <TaskList/> : <Login setUser= {setUser}/>}/>
-        <Route path="/TaskList/:id" element={user ? <TaskDetail/> : <Login  setUser= {setUser}/>}/>
+         <Route path="/Tasks" element={user ? <TaskList/> : <Login setUser= {setUser}/>}/>
+        <Route path="/Tasks/:id" element={user ? <TaskDetail/> : <Login  setUser= {setUser}/>}/>
     </Routes>
     
     </div>
