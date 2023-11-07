@@ -14,14 +14,14 @@ const main = async () => {
   const user2 = await new User ({
     name: "Brady Bull",
     phone: "4445556666",
-    email: "esiff@gmail.com"
+    email: "bb@gmail.com"
   })
   user2.save()
 
   const user3 = await new User ({
     name: "jeniffer Jones",
     phone: "7778889999",
-    email: "esiff@gmail.com"
+    email: "jj@gmail.com"
     
   })
   user3.save()
