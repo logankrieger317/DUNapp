@@ -8,15 +8,17 @@ import { BASE_URL } from "../globals";
 
 export default function TaskList() {
 
-  const userId = "654947612adc709e9b98fc3b"
+  const userId = "654947612adc709e9b98fc33"
 
   const [taskList, setTaskList] = useState([]);
 
   useEffect(() => {
     const getTasklist = async () => {
 
+
       const response = await axios.get( `${BASE_URL}/tasks/`);
       setTaskList(response.data);
+
 
     };
     getTasklist();
@@ -35,6 +37,7 @@ export default function TaskList() {
       <SiteNav />
       <div className="TaskList">
         <h2>Task List</h2>
+
         <div>
         
         {taskList.map((task, key) => (
@@ -48,7 +51,9 @@ export default function TaskList() {
             </Card.Body>
           </Card>
         ))}
+
         </div>
+
         {/* <Card className="mb-3">
             <Card.Body>
                 <Card.Title>Task Name</Card.Title>
