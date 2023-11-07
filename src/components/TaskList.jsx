@@ -16,8 +16,12 @@ export default function TaskList() {
     const getTasklist = async () => {
 
 
+
+
+
       const response = await axios.get( `${BASE_URL}/tasks/`);
       setTaskList(response.data);
+
 
 
     };
@@ -38,8 +42,10 @@ export default function TaskList() {
       <div className="TaskList">
         <h2>Task List</h2>
 
+
         <div>
         
+
         {taskList.map((task, key) => (
           <Card key={key} className="mb-3">
             <Card.Body>
@@ -52,7 +58,9 @@ export default function TaskList() {
           </Card>
         ))}
 
+
         </div>
+
 
         {/* <Card className="mb-3">
             <Card.Body>
