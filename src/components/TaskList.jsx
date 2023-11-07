@@ -31,7 +31,7 @@ export default function TaskList() {
       <SiteNav />
       <div className="TaskList">
         <h2>Task List</h2>
-        {taskList.map((task, key) => (
+        {/* {taskList.map((task, key) => (
           <Card key={key} className="mb-3">
             <Card.Body>
               <Card.Title>{task.name}</Card.Title>
@@ -41,7 +41,17 @@ export default function TaskList() {
               </Button>
             </Card.Body>
           </Card>
-        ))}
+        ))} */}
+
+        <Card className="mb-3">
+            <Card.Body>
+                <Card.Title>Task Name</Card.Title>
+                <Card.Text>Task Description</Card.Text>
+                <Button variant="primary" onClick={() => showTask(task.id)}>
+                    View Task
+                </Button>
+            </Card.Body>
+        </Card>
       </div>
     </>
   );
