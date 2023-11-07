@@ -15,8 +15,10 @@ export default function TaskList() {
   useEffect(() => {
     const getTasklist = async () => {
 
-      const response = await axios.get( `${BASE_URL}/tasks/${userId}`);
-      setTaskList(response.data.task);
+
+      const response = await axios.get( `${BASE_URL}/tasks/`);
+      setTaskList(response.data);
+
 
     };
     getTasklist();
@@ -28,22 +30,29 @@ export default function TaskList() {
     navigate(`${key}`);
   };
 
+
+
   return (
     <>
       <SiteNav />
       <div className="TaskList">
         <h2>Task List</h2>
+
+        <div>
+        
         {taskList.map((task, key) => (
           <Card key={key} className="mb-3">
             <Card.Body>
               <Card.Title>{task.name}</Card.Title>
               <Card.Text>{task.description}</Card.Text>
-              <Button variant="primary" onClick={() => showTask(task.id)}>
+              <Button variant="primary" onClick={() => showTask(key)}>
                 View Task
               </Button>
             </Card.Body>
           </Card>
         ))}
+
+        </div>
 
         {/* <Card className="mb-3">
             <Card.Body>

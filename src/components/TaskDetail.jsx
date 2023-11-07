@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { useParams, Link } from "react-router-dom"
 import axios from "axios"
+import { BASE_URL } from "../globals"
 
 
 
@@ -8,12 +9,12 @@ export default function TaskDetail() {
 
     const [task, setTask] = useState()
 
-    let{id} = useParams()
+    const {id} = useParams()
 
     useEffect(()=>{
         const getTask = async() => {
-            const response = await axios.get()
-            setTask(response)
+            const response = await axios.get(`${BASE_URL}/tasks/`)
+            setTask(response.data[id])
         }
         getTask()
     },[])
@@ -31,7 +32,7 @@ export default function TaskDetail() {
             <h2>Task: {task.name}</h2>
             <h4>Description: {task.description}</h4>
             <h4>Due by: {task.time}</h4>
-            <Link to="/TaskList"> Return to Task List </Link>
+            <Link to="/Tasks"> Return to Task List </Link>
         </div>
     ) : <h3>Pulling up Task...</h3>
 }

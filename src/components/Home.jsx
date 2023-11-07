@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import SiteNav from "./Nav";
 import { Link } from "react-router-dom";
+import TaskDetail from "./TaskDetail";
 
 export default function Home() {
   const [fullscreen, setFullscreen] = useState(true);
@@ -89,7 +90,7 @@ export default function Home() {
         </div>
         <div className='home-body'>
           <button className='new-task-button' onClick={handleNewTaskClick}>New Task</button>
-          <Link to= "/TaskList"><button className='view-task-button'>View All Tasks</button></Link>
+          <Link to= "/Tasks"><button className='view-task-button'>View All Tasks</button></Link>
           <TaskTable tasks={tasks} />
           <Modal show={show} fullscreen={fullscreen} onHide={handleClose}>
             <Modal.Header closeButton>
@@ -117,6 +118,8 @@ export default function Home() {
               <Modal.Body>Modal body content</Modal.Body>
             </Modal>
           )}
+
+          
         </div>
       </div>
     </div>
