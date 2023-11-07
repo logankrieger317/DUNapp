@@ -4,6 +4,8 @@ import Modal from 'react-bootstrap/Modal';
 import SiteNav from "./Nav";
 import { Link } from "react-router-dom";
 import TaskDetail from "./TaskDetail";
+import axios from "axios";
+import { BASE_URL } from "../globals";
 
 export default function Home() {
   const [fullscreen, setFullscreen] = useState(true);
@@ -22,6 +24,7 @@ export default function Home() {
     { id: 8, name: 'Task 8', description: 'Description 8' },
     { id: 9, name: 'Task 9', description: 'Description 9' },
     { id: 10, name: 'Task 10', description: 'Description 10' },
+
   ]);
 
   function handleNewTaskClick() {
@@ -54,6 +57,15 @@ export default function Home() {
     setShow(false);
     setTaskName('');
     setTaskDescription('');
+        const createTask = async() =>{
+          const response = await axios.post(`${BASE_URL}/tasks/`,{
+          user: `654947612adc709e9b98fc33`,
+          name: taskName,
+          description: taskDescription
+      })
+      console.log(response.data)
+    }
+    createTask()
   }
 
 

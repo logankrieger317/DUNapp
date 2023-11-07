@@ -21,6 +21,7 @@ export default function TaskList() {
 
       const response = await axios.get( `${BASE_URL}/tasks/`);
       setTaskList(response.data);
+      console.log(response.data)
 
 
 
@@ -34,6 +35,12 @@ export default function TaskList() {
     navigate(`${key}`);
   };
 
+  function deleteTaskFunction(key){
+    const deleteTask = async() => {
+      const response2 = await axios.delete(`${BASE_URL}/tasks/${key}`)
+    }
+    deleteTask()
+  }
 
 
   return (
@@ -53,6 +60,9 @@ export default function TaskList() {
               <Card.Text>{task.time}</Card.Text>
               <Button variant="primary" onClick={() => showTask(key)}>
                 View Task
+              </Button>
+              <Button onClick={() => deleteTaskFunction(task._id)}>
+                Complete / Delete
               </Button>
             </Card.Body>
           </Card>
