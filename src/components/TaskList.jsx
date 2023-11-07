@@ -12,7 +12,7 @@ export default function TaskList() {
 
   useEffect(() => {
     const getTasklist = async () => {
-      const response = await axios.get( '${BASE_URL}/tasks');
+      const response = await axios.get( `${BASE_URL}/taskList`);
       setTaskList(response.data);
     };
     getTasklist();
