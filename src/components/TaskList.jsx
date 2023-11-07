@@ -15,13 +15,14 @@ export default function TaskList() {
   useEffect(() => {
     const getTasklist = async () => {
 
-<<<<<<< HEAD
-      const response = await axios.get( `${BASE_URL}/tasks/${userId}`);
-      setTaskList(response.data.task);
-=======
+
+
+
+
       const response = await axios.get( `${BASE_URL}/tasks/`);
       setTaskList(response.data);
->>>>>>> 66ee35e994d37e82b41e76e23094941efb539cba
+
+
 
     };
     getTasklist();
@@ -40,11 +41,11 @@ export default function TaskList() {
       <SiteNav />
       <div className="TaskList">
         <h2>Task List</h2>
-<<<<<<< HEAD
-=======
+
+
         <div>
         
->>>>>>> 66ee35e994d37e82b41e76e23094941efb539cba
+
         {taskList.map((task, key) => (
           <Card key={key} className="mb-3">
             <Card.Body>
@@ -56,11 +57,11 @@ export default function TaskList() {
             </Card.Body>
           </Card>
         ))}
-<<<<<<< HEAD
 
-=======
+
         </div>
->>>>>>> 66ee35e994d37e82b41e76e23094941efb539cba
+
+
         {/* <Card className="mb-3">
             <Card.Body>
                 <Card.Title>Task Name</Card.Title>
