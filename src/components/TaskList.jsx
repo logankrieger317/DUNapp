@@ -50,7 +50,7 @@ export default function TaskList() {
           <Card key={key} className="mb-3">
             <Card.Body>
               <Card.Title>{task.name}</Card.Title>
-              <Card.Text>{task.description}</Card.Text>
+              <Card.Text>{task.time}</Card.Text>
               <Button variant="primary" onClick={() => showTask(key)}>
                 View Task
               </Button>
