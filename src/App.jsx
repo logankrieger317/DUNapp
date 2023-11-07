@@ -21,8 +21,8 @@ function App() {
       <Routes>
         <Route path="/" element={user  ? <Navigate to={"/Home"}/> : <Login setUser= {setUser}/> }/>
         <Route path="/Home" element={user ? <Home/> : <Login setUser= {setUser}/>}/>
-         <Route path="/TaskList" element={user ? <TaskList/> : <Login setUser= {setUser}/>}/>
-        <Route path="/TaskList/:id" element={user ? <TaskDetail/> : <Login  setUser= {setUser}/>}/>
+         <Route path="/Tasks" element={user ? <TaskList/> : <Login setUser= {setUser}/>}/>
+        <Route path="/Tasks/:id" element={user ? <TaskDetail/> : <Login  setUser= {setUser}/>}/>
     </Routes>
     
     </div>
