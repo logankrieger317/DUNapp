@@ -85,7 +85,7 @@ export default function Home() {
       <SiteNav />
       <div className='home-container'>
         <div className='home-header'>
-          <h2 className='welcome-message'>Welcome "Insert Username Here" </h2>
+          <h2 className='welcome-message'>Welcome username </h2>
         </div>
         <div className='home-body'>
           <button className='new-task-button' onClick={handleNewTaskClick}>New Task</button>
