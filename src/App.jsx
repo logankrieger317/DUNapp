@@ -11,7 +11,7 @@ import {Navigate} from 'react-router-dom'
 
 
 function App() {
-  const userId= {
+  const user1= {
     id: "654947612adc709e9b98fc33",
     name: "Erik Smith",
     Login: "esiff@gmail.com",
@@ -19,7 +19,8 @@ function App() {
     
 
   } //set user with function to get user
-  const [user, setUser] = useState() //add in get user function when validating
+  const [user, setUser] = useState(user1
+    ) //add in get user function when validating
 
 
   return (

@@ -4,9 +4,11 @@ import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
 export default function SiteNav() {
   
   return (
+     
      <Navbar expand="lg" className="bg-body-tertiary">
       <Container className='nav-bar-container'>
-        <Navbar.Brand href="#home">D.U.N</Navbar.Brand>
+        <Navbar.Brand href="#home" className='nav-brand'>D.U.N</Navbar.Brand>
+        <img src="src/assets/images/Logo.jpeg" id="nav-logo"></img>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
@@ -22,7 +24,7 @@ export default function SiteNav() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
-
+  
     
   )
 }

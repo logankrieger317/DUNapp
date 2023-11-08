@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import TaskDetail from "./TaskDetail";
 import axios from "axios";
 import { BASE_URL } from "../globals";
+import Calendar from "react-calendar";
+
 
 export default function Home() {
   const [fullscreen, setFullscreen] = useState(true);
@@ -89,6 +91,7 @@ export default function Home() {
   }
 
 
+
   return (
     <div>
       <SiteNav />
@@ -101,7 +104,8 @@ export default function Home() {
           <button className='Button' onClick={handleNewTaskClick}>  New Task  </button>
           <Link to= "/Tasks"><button className='Button'>View All Tasks</button></Link>
           </div>
-          <TaskTable tasks={tasks} />
+          {/* <TaskTable tasks={tasks} /> */}
+          <TaskDetail/>
           <Modal show={show} fullscreen={fullscreen} onHide={handleClose}>
             <Modal.Header closeButton>
               <Modal.Title>New Task</Modal.Title>
@@ -112,6 +116,7 @@ export default function Home() {
                   <label htmlFor="taskName" className="form-label">Task Name</label>
                   <input type="text" className="form-control" id="taskName" value={taskName} onChange={handleTaskNameChange} />
                 </div>
+                <Calendar/>
                 <div className="mb-3">
                   <label htmlFor="taskDescription" className="form-label">Task Description</label>
                   <textarea className="form-control" id="taskDescription" rows="3" value={taskDescription} onChange={handleTaskDescriptionChange}></textarea>

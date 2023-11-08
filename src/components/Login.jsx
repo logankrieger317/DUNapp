@@ -1,19 +1,20 @@
 import React, { useState } from "react"
 
 export default function (props) {
-  let [authMode, setAuthMode] = useState("signin")
+  const [authMode, setAuthMode] = useState("signin")
 
   const changeAuthMode = () => {
     setAuthMode(authMode === "signin" ? "signup" : "signin")
   }
 
+  
   if (authMode === "signin") {
     return (
       <div className="Auth-form-container">
         <form className="Auth-form">
           <div className="Auth-form-content">
             <h3 className="Auth-form-title">Sign In</h3>
-            <img src="src/assets/images/Logo.jpeg" classname="login-logo"></img>
+            <img src="src/assets/images/Logo.jpeg" id="login-logo"></img>
             <div className="text-center">
               Not registered yet?{" "}
               <span className="link-primary" onClick={changeAuthMode}>
@@ -53,6 +54,7 @@ export default function (props) {
       <form className="Auth-form">
         <div className="Auth-form-content">
           <h3 className="Auth-form-title">Sign In</h3>
+          <img src="src/assets/images/Logo.jpeg" id="login-logo"></img>
           <div className="text-center">
             Already registered?{" "}
             <span className="link-primary" onClick={changeAuthMode}>
