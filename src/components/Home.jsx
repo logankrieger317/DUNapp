@@ -14,16 +14,12 @@ export default function Home() {
   const [taskName, setTaskName] = useState('');
   const [taskDescription, setTaskDescription] = useState('');
   const [tasks, setTasks] = useState([
-    { id: 1, name: 'Task 1', description: 'Description 1' },
-    { id: 2, name: 'Task 2', description: 'Description 2' },
-    { id: 3, name: 'Task 3', description: 'Description 3' },
-    { id: 4, name: 'Task 4', description: 'Description 4' },
-    { id: 5, name: 'Task 5', description: 'Description 5' },
-    { id: 6, name: 'Task 6', description: 'Description 6' },
-    { id: 7, name: 'Task 7', description: 'Description 7' },
-    { id: 8, name: 'Task 8', description: 'Description 8' },
-    { id: 9, name: 'Task 9', description: 'Description 9' },
-    { id: 10, name: 'Task 10', description: 'Description 10' },
+    { id: 1, name: '', description: '' },
+    { id: 2, name: '', description: '' },
+    { id: 3, name: '', description: '' },
+    { id: 4, name: '', description: '' },
+    { id: 5, name: '', description: '' },
+  
 
   ]);
 
@@ -98,11 +94,13 @@ export default function Home() {
       <SiteNav />
       <div className='home-container'>
         <div className='home-header'>
-          <h2 className='welcome-message'>Welcome username </h2>
+          <h2 className='welcome-message'>Welcome  </h2>
         </div>
         <div className='home-body'>
-          <button className='new-task-button' onClick={handleNewTaskClick}>New Task</button>
-          <Link to= "/Tasks"><button className='view-task-button'>View All Tasks</button></Link>
+          <div className="button-container">
+          <button className='Button' onClick={handleNewTaskClick}>  New Task  </button>
+          <Link to= "/Tasks"><button className='Button'>View All Tasks</button></Link>
+          </div>
           <TaskTable tasks={tasks} />
           <Modal show={show} fullscreen={fullscreen} onHide={handleClose}>
             <Modal.Header closeButton>
@@ -125,7 +123,7 @@ export default function Home() {
           {showExample && (
             <Modal show={showExample} fullscreen={fullscreen} onHide={handleClose}>
               <Modal.Header closeButton>
-                <Modal.Title>Example Modal</Modal.Title>
+                <Modal.Title> Modal</Modal.Title>
               </Modal.Header>
               <Modal.Body>Modal body content</Modal.Body>
             </Modal>

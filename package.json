@@ -17,6 +17,7 @@
     "morgan": "^1.10.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.9.1",
+    "react-calendar": "^4.6.1",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.18.0",
     "react-strap": "^0.0.1"

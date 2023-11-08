@@ -13,6 +13,7 @@ export default function (props) {
         <form className="Auth-form">
           <div className="Auth-form-content">
             <h3 className="Auth-form-title">Sign In</h3>
+            <img src="src/assets/images/Logo.jpeg" classname="login-logo"></img>
             <div className="text-center">
               Not registered yet?{" "}
               <span className="link-primary" onClick={changeAuthMode}>

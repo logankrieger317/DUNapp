@@ -78,10 +78,10 @@ export default function TaskList() {
             <Card.Body>
               <Card.Title>{task.name}</Card.Title>
               <Card.Text>{task.time}</Card.Text>
-              <Button variant="primary" onClick={() => showTask(key)}>
+              <Button variant="primary" className="Button" onClick={() => showTask(key)}>
                 View Task
               </Button>
-              <Button onClick={() => deleteTaskFunction(task._id)}>
+              <Button className="Button" onClick={() => deleteTaskFunction(task._id)}>
                 Complete / Delete
               </Button>
             </Card.Body>
@@ -91,16 +91,6 @@ export default function TaskList() {
 
         </div>
 
-
-        {/* <Card className="mb-3">
-            <Card.Body>
-                <Card.Title>Task Name</Card.Title>
-                <Card.Text>Task Description</Card.Text>
-                <Button variant="primary" onClick={() => showTask(task.id)}>
-                    View Task
-                </Button>
-            </Card.Body>
-        </Card> */}
       </div>
     </>
   );
