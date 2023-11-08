@@ -265,10 +265,13 @@ label {
 }
 
 
-
-.model{
-  height: 200px;
-  width: 200px;
+/* Modal Styling */
+.modal1{
+  display:flex;
+  position:absolute;
+  height: 100vh;
+  width: 100vw;
   background-color: yellow;
   color: red;
+  z-index: 5;
 }
