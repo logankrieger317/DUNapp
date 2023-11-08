@@ -5,6 +5,7 @@ import { BASE_URL } from "../globals"
 import SiteNav from "./Nav"
 import EditModal from "./EditModal"
 
+
 export default function TaskDetail() {
   const { id } = useParams();
   const [task, setTask] = useState(null);
@@ -17,7 +18,7 @@ export default function TaskDetail() {
       setTask(response.data[id]);
     }
     getTask();
-  }, [id]);
+  }, [id,showModal]);
 
   const toggleModal = () => {
     setShowModal(!showModal);
@@ -57,7 +58,7 @@ export default function TaskDetail() {
         </button>
         {showModal && (
           <EditModal
-            task={task}
+            task={task} toggleModal={toggleModal}
             editedTaskName={editedTaskName}
             handleTaskNameChange={handleTaskNameChange}
             handleModalClose={handleModalClose}

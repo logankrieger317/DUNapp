@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import axios from "axios";
+import { BASE_URL } from "../globals";
 
 export default function EditModal({ task, toggleModal }) {
   const [name, setName] = useState(task.name);
@@ -20,12 +22,13 @@ export default function EditModal({ task, toggleModal }) {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const updatedTask = { name, description, time };
-    await axios.put(`${BASE_URL}/tasks/${task.id}`, updatedTask);
+    await axios.put(`${BASE_URL}/tasks/${task._id}`, updatedTask);
     toggleModal();
   };
 
   return (
-    <div className="modal">
+    
+    <div className="modal1">
       <div className="modal-content">
         <h2>Edit Task</h2>
         <form onSubmit={handleSubmit}>
@@ -62,7 +65,8 @@ export default function EditModal({ task, toggleModal }) {
             </button>
           </div>
         </form>
-      </div>
-    </div>
+    <h1>test</h1>
+       </div>
+     </div>
   );
 }
