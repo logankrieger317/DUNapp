@@ -19,7 +19,7 @@ function App() {
     
 
   } //set user with function to get user
-  const [user, setUser] = useState(userId) //add in get user function when validating
+  const [user, setUser] = useState() //add in get user function when validating
 
 
   return (
