@@ -31,6 +31,7 @@ function App() {
         <Route path="/Home" element={user ? <Home/> : <Login setUser= {setUser}/>}/>
          <Route path="/Tasks" element={user ? <TaskList/> : <Login setUser= {setUser}/>}/>
         <Route path="/Tasks/:id" element={user ? <TaskDetail/> : <Login  setUser= {setUser}/>}/>
+        
     </Routes>
     
     </div>
