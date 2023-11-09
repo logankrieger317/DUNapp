@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import axios from "axios";
 import { BASE_URL } from "../globals";
 import { useNavigate } from "react-router-dom";
-
+import { Nav } from "react-bootstrap";
 
 export default function Signup() {
     const [name, setuser] = useState('')
@@ -54,6 +54,7 @@ export default function Signup() {
                   <input type="text" className="form-control" id="password"  value={password} onChange={(e) => setpassword(e.target.value)}/>
                 </div>
                 <Button type="submit">Add User</Button>
+                <Nav.Link href="Login">Login</Nav.Link>
               </form>
             
         </div>
