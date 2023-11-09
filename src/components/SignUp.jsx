@@ -11,6 +11,7 @@ import Calendar from "react-calendar";
 export default function Signup() {
     const [name, setuser] = useState('');
     const [email, setemail] = useState('');
+    const [password, setpassword] = useState('');
 
 
     function handleSubmit(event) {
@@ -19,6 +20,7 @@ export default function Signup() {
               const response = await axios.post(`${BASE_URL}/users`,{
               name: name,
               email: email,
+              password: password
               
           })
           console.log(response.data)
@@ -32,13 +34,18 @@ export default function Signup() {
     return(
         <div>
             <form onSubmit={handleSubmit}>
+                <h2>Create User</h2>
                 <div className="mb-3">
-                  <label htmlFor="username" className="form-label">Sign Up</label>
+                  <label htmlFor="username" className="form-label">Input User Name</label>
                   <input type="text" className="form-control" id="username" value={name} onChange={(e) => setuser(e.target.value)} />
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="email" className="form-label">input email</label>
-                  <textarea className="form-control" id="email" rows="3" value={email} onChange={(e) => setemail(e.target.value)}></textarea>
+                  <label htmlFor="email" className="form-label">Input email</label>
+                  <input type="text" className="form-control" id="email"  value={email} onChange={(e) => setemail(e.target.value)}/>
+                </div>
+                <div className="mb-3">
+                  <label htmlFor="password" className="form-label">Input password</label>
+                  <input type="text" className="form-control" id="password"  value={password} onChange={(e) => setpassword(e.target.value)}/>
                 </div>
                 <Button type="submit">Add User</Button>
               </form>
