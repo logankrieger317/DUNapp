@@ -7,6 +7,7 @@ import './App.css'
 import { Route, Routes } from 'react-router-dom'
 import TaskDetail from './components/TaskDetail'
 import {Navigate} from 'react-router-dom'
+import Signup from './components/SignUp'
 
 
 
@@ -31,6 +32,7 @@ function App() {
         <Route path="/Home" element={user ? <Home/> : <Login setUser= {setUser}/>}/>
          <Route path="/Tasks" element={user ? <TaskList/> : <Login setUser= {setUser}/>}/>
         <Route path="/Tasks/:id" element={user ? <TaskDetail/> : <Login  setUser= {setUser}/>}/>
+        <Route path="/signup" element={<Signup/> }/>
         
     </Routes>
     
