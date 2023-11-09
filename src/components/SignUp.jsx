@@ -1,32 +1,38 @@
 import { useState } from "react";
 import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
-import SiteNav from "./Nav";
-import { Link } from "react-router-dom";
 import axios from "axios";
 import { BASE_URL } from "../globals";
-import Calendar from "react-calendar";
+import { useNavigate } from "react-router-dom";
 
 
 export default function Signup() {
-    const [name, setuser] = useState('');
-    const [email, setemail] = useState('');
-    const [password, setpassword] = useState('');
+    const [name, setuser] = useState('')
+    const [email, setemail] = useState('')
+    const [password, setpassword] = useState('')
 
+    const navigate = useNavigate();
+
+
+    async function createUser() {
+        try {
+            const response = await axios.post(`${BASE_URL}/users`, {
+                name: name,
+                email: email,
+                password: password
+            });
+            console.log(response.data);
+
+            // Redirect to the Home component upon successful user creation
+            navigate('/home')
+        } catch (error) {
+            console.error(error)
+        }
+    }
 
     function handleSubmit(event) {
-        event.preventDefault();
-            const createUser = async() =>{
-              const response = await axios.post(`${BASE_URL}/users`,{
-              name: name,
-              email: email,
-              password: password
-              
-          })
-          console.log(response.data)
-        }
+        event.preventDefault()
         createUser()
-      }
+    }
 
 
 
