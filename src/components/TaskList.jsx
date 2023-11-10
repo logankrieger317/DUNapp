@@ -44,12 +44,12 @@ export default function TaskList() {
     navigate(`${key}`);
   };
 
-  function deleteTaskFunction(key){
+  function deleteTaskFunction(id){
     const deleteTask = async() => {
-      const response2 = await axios.delete(`${BASE_URL}/tasks/${key}`)
+      const response2 = await axios.delete(`${BASE_URL}/tasks/${id}`)
       console.log(response2)
       console.log(taskList)
-      setTaskList(prevTaskList => prevTaskList.filter(task => task._id !== response2.data._id))
+      setTaskList(prevTaskList => prevTaskList.filter(task => task._id !== id))
     }
     deleteTask()
     
