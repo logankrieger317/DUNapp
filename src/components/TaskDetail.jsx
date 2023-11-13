@@ -4,6 +4,7 @@ import axios from "axios"
 import { BASE_URL } from "../globals"
 import SiteNav from "./Nav"
 import EditModal from "./EditModal"
+import TaskList from "./TaskList"
 
 
 export default function TaskDetail() {
@@ -19,6 +20,7 @@ export default function TaskDetail() {
     }
     getTask();
   }, [id,showModal]);
+  console.log(task)
 
   const toggleModal = () => {
     setShowModal(!showModal);
