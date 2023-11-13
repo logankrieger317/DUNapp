@@ -65,7 +65,7 @@ export default function EditModal({ task, toggleModal }) {
             </button>
           </div>
         </form>
-    <h1>test</h1>
+    
        </div>
      </div>
   );
