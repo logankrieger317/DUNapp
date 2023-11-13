@@ -16,9 +16,9 @@ export default function SiteNav() {
             <Nav.Link href="Tasks">View All Tasks</Nav.Link>
             <Nav.Link href="#link">Create New Task</Nav.Link>
             <NavDropdown title="Meet The Team" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Joshua Thomas </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Logan Krieger </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Sage Maddux </NavDropdown.Item>
+              <NavDropdown.Item href="https://github.com/jtfrostyboy">Joshua Thomas </NavDropdown.Item>
+              <NavDropdown.Item href="https://github.com/logankrieger317">Logan Krieger </NavDropdown.Item>
+              <NavDropdown.Item href="https://github.com/ssmaddux">Sage Maddux </NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>

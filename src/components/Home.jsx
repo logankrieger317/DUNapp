@@ -84,8 +84,6 @@ export default function Home() {
           <button className='Button' onClick={handleNewTaskClick}>  New Task  </button>
           <Link to= "/Tasks"><button className='Button'>View All Tasks</button></Link>
           </div>
-          {/* <TaskTable tasks={tasks} /> */}
-          {/* <TaskDetail/> */}
           <Modal show={show} fullscreen={fullscreen} onHide={handleClose}>
             <Modal.Header closeButton>
               <Modal.Title>New Task</Modal.Title>
