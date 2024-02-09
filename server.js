@@ -1,6 +1,6 @@
 const express = require('express')
 const cors = require('cors')
-const PORT = process.env.PORT || 3001
+const PORT = process.env.PORT || 3002
 const db = require('./db')
 const bodyParser = require('body-parser')
 
@@ -47,7 +47,7 @@ app.delete('/users/:id', usersController.deleteUser)
 
 
 app.get('/', (req, res) => {
-    res.send('This is root!!')
+    res.send('This Is The DUN App!!')
   })
 
 app.listen(PORT, () => {
